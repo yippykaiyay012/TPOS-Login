@@ -1,0 +1,239 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.title-image{
+    max-width: 700px;
+    margin-top: 10px;
+}
+
+
+.login-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 128, 165, 0.8);
+    padding: 50px 150px 50px 150px;
+    border-radius: 20px;
+    margin-top: 125px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    animation-name: fade-in-up;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear; 
+    animation-delay: 1000ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.login-text-input{
+    box-sizing: border-box;
+    border-radius: 25px;
+    border-style: none;
+    font-size: 2rem;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    width: 85%;
+}
+
+.text-username {
+    margin-bottom: 15px;
+}
+
+.login-button{
+    border-radius: 25px;
+    border-style: none;
+    font-size: 2rem;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    background-color: #60C8BB;
+    color: white;
+    margin-top: 15px;
+    width: 85%;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.login-button:hover{
+    background-color: #555;
+}
+.login-button:disabled{
+    background-color: #555;
+    cursor: none;
+}
+
+
+.spin-compass {
+    animation-name: spin;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear; 
+}
+
+.fade-in {
+    animation-name: fade-in;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear; 
+}
+
+.animated-text {
+    opacity: 0;
+    margin: 0 0 0 auto;
+    text-align: right;
+    font-weight: 600;
+    color: #0080A5;
+    font-size: 2.5rem;
+    animation-name: from-right;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear; 
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes from-right{
+    0%{
+        opacity: 0;
+        transform: translateX(500px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }
+
+  @keyframes fade-in {
+      from {
+          opacity: 0;
+      }
+        to {
+            opacity: 1;
+        }
+  }
+
+  @keyframes fade-in-up {
+      from {
+          opacity: 0;
+          transform: translateY(50px);
+      }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 700px) {
+
+    html{
+        overflow: hidden;
+    }
+    body{        
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
+    .container{
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+    }
+    .title-section{
+        text-align: center;
+    }
+    .title-image{
+        margin-top: 20px;
+        max-width: 95%;
+    }
+
+
+
+
+    /* .compass-mobile{
+        position: absolute;
+        z-index: -1;
+        display: block;
+        width: 650px;
+        height: 650px;
+
+    } */
+
+
+
+
+    .compass-area {
+        z-index: -1;
+        position: absolute;
+        top: 30%;
+    
+    }
+
+    .compass {
+        max-width: 600px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+
+    .login-area{
+        padding: 50px 25px 50px 25px;
+        margin-top: 80px;
+        margin-bottom: 0px;
+        width: 95%;
+        height: 100%;
+        border-top-left-radius: 80px;
+        border-top-right-radius: 80px;
+
+    }
+
+
+
+
+    .login-text-input{
+        width: 80%;
+    }
+    
+    .login-button{
+        width: 80%;
+        margin-top: 200px;
+    }
+
+
+
+
+  }

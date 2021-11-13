@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainingportal Offline</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="title-section fade-in">
+            <img class="title-image" src="img/Title-plain.png" alt="logo">
+            <p class="animated-text">Trainingportal Offline</p>
+        </div>
+
+        <div class="login-area fade-in-up">       
+            <input class="login-text-input text-username" type="text" placeholder="Username" onfocus="placeholder=''" onblur="placeholder='Username'">
+            <input class="login-text-input text-password" type="password" placeholder="Password" onfocus="placeholder=''" onblur="placeholder='Password'">
+            <button class="login-button">Sign In</button>
+        </div>
+
+        <div class="compass-area">
+            <img class="compass" src="img/compass.png" alt="compass">
+        </div>
+
+
+
+    </div>
+
+</body>
+
+<script>
+    var loginButton = document.querySelector(".login-button");
+    var username = document.querySelector(".text-username");
+    var password = document.querySelector(".text-password");
+    var compass = document.querySelector(".compass-area");
+
+    loginButton.addEventListener("click", function() {
+        compass.classList.add("spin-compass");
+        loginButton.disabled = true;
+        setTimeout(function() {
+            compass.classList.remove("spin-compass");
+            loginButton.disabled = false;
+        }, 8000);
+   });
+</script>
+</html>
